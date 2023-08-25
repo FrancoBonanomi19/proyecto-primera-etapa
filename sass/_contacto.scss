@@ -1,0 +1,91 @@
+.seccion-formulario {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    border: 2px solid #fff;
+    outline: 2px solid #fff;
+    color: #fff;
+    outline-offset: 0.5rem;
+    width: 75%;
+    text-align: center;
+    padding: 1rem;
+
+    & * {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 0.5rem;
+      font-family: "Staatliches", cursive;
+      border: none;
+      outline: none;
+      resize: none;
+
+      &::placeholder {
+        font-size: 15px;
+        font-family: "Staatliches", cursive;
+        color: #000;
+      }
+
+      &[required]:valid {
+        outline: 2px solid lightgreen;
+      }
+      &[required]:invalid {
+        outline: 2px solid red;
+      }
+    }
+    & [type="submit"] {
+      width: 70%;
+      cursor: pointer;
+      font-size: 17px;
+      margin: 20px auto;
+    }
+  }
+}
+
+legend {
+  font-size: 20px;
+}
+
+.none {
+  display: none;
+}
+
+.invalido {
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  display: block;
+  margin-top: -20px;
+}
+
+.active {
+  animation-name: invalido;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.loader {
+  width: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mensaje {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+@keyframes invalido {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

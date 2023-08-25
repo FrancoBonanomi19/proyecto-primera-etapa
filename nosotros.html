@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Proyecto Integrador</title>
+  </head>
+
+  <body data-dark>
+    <header class="main-header" data-dark>
+      <input type="checkbox" id="menu" />
+
+      <nav class="nav-bar">
+        <!-- nav-bar -->
+        <ul class="nav-bar__nav-list">
+          <li class="nav-bar__nav-item">
+            <a href="index.html" class="nav-bar__nav-link">Inicio</a>
+          </li>
+          <li class="nav-bar__nav-item">
+            <a href="#" class="nav-bar__nav-link">Alta</a>
+          </li>
+          <li class="nav-bar__nav-item">
+            <a href="contacto.html" class="nav-bar__nav-link">Contacto</a>
+          </li>
+          <li class="nav-bar__nav-item">
+            <a href="nosotros.html" class="nav-bar__nav-link">Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- nav-bar -->
+
+      <div class="search-bar">
+        <!-- search-bar -->
+        <div class="search-bar__logo-container">
+          <img src="https://frontenstore-arbol.netlify.app/img/logo.png" />
+        </div>
+        <form action="" class="search-bar__form-container">
+          <label for="busqueda" class="search-bar__form-label">Buscar</label>
+          <input type="search" class="search-bar__form-search" id="busqueda" />
+          <input type="submit" value="Buscar" class="search-bar__form-submit" />
+        </form>
+        <div class="search-bar__carrito-container">
+          <img src="img/cart-add-regular-24.png" alt="carrito" />
+        </div>
+        <div class="menu-toggle">
+          <label for="menu" class="menu-toggle__label">
+            <span class="menu-toggle__top-bread"></span>
+            <span class="menu-toggle__meat"></span>
+            <span class="menu-toggle__bottom-bread"></span>
+          </label>
+        </div>
+      </div>
+      <!-- search-bar -->
+    </header>
+    <section class="seccion-nosotros">
+      <h2 class="seccion-nosotros__titulo">Sobre Nosotros</h2>
+      <p class="seccion-nosotros__parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
+        debitis ratione quo quidem esse laboriosam rem, odit dolore suscipit
+        commodi architecto? Fuga officia libero minus possimus quisquam, commodi
+        quam quia? Cupiditate maiores numquam alias perferendis tenetur, veniam
+        laboriosam illum. Recusandae, modi deserunt cupiditate iusto quibusdam
+        praesentium, optio minus sint eaque adipisci corporis omnis quia cumque
+        tempore in sit quis fugiat. Obcaecati blanditiis, perspiciatis fuga
+        laboriosam expedita soluta officia. Quibusdam alias at fuga? Placeat
+        veritatis exercitationem voluptatum modi incidunt inventore eaque
+        mollitia quidem consequatur enim harum sequi nemo ipsa ratione ut,
+        facere, impedit, optio doloribus fugiat dolores neque. Amet, placeat
+        porro.
+      </p>
+      <div class="slider">
+        <div class="items-container">
+          <div class="items-container__item visible">
+            <img src="img/grafico2.jpg" alt="remera node" />
+          </div>
+          <div class="items-container__item">
+            <img src="img/grafico1.jpg" alt="remera react" />
+          </div>
+          <div class="items-container__item">
+            <img src="img/nosotros.jpg" alt="remera redux" />
+          </div>
+        </div>
+        <div class="arrows-container">
+          <a href="#" class="prev">&laquo;</a>
+          <a href="#" class="next">&raquo;</a>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Proyecto Integrador</title>
+  </head>
+
+  <body data-dark>
+    <header class="main-header" data-dark>
+      <input type="checkbox" id="menu" />
+
+      <nav class="nav-bar">
+        <!-- nav-bar -->
+        <ul class="nav-bar__nav-list">
+          <li class="nav-bar__nav-item">
+            <a href="index.html" class="nav-bar__nav-link">Inicio</a>
+          </li>
+          <li class="nav-bar__nav-item">
+            <a href="#" class="nav-bar__nav-link">Alta</a>
+          </li>
+          <li class="nav-bar__nav-item">
+            <a href="contacto.html" class="nav-bar__nav-link">Contacto</a>
+          </li>
+          <li class="nav-bar__nav-item">
+            <a href="nosotros.html" class="nav-bar__nav-link">Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- nav-bar -->
+
+      <div class="search-bar">
+        <!-- search-bar -->
+        <div class="search-bar__logo-container">
+          <img src="https://frontenstore-arbol.netlify.app/img/logo.png" />
+        </div>
+        <form action="" class="search-bar__form-container">
+          <label for="busqueda" class="search-bar__form-label">Buscar</label>
+          <input type="search" class="search-bar__form-search" id="busqueda" />
+          <input type="submit" value="Buscar" class="search-bar__form-submit" />
+        </form>
+        <div class="search-bar__carrito-container">
+          <img src="img/cart-add-regular-24.png" alt="carrito" />
+        </div>
+        <div class="menu-toggle">
+          <label for="menu" class="menu-toggle__label">
+            <span class="menu-toggle__top-bread"></span>
+            <span class="menu-toggle__meat"></span>
+            <span class="menu-toggle__bottom-bread"></span>
+          </label>
+        </div>
+      </div>
+      <!-- search-bar -->
+    </header>
+    <section class="seccion-formulario">
+      <form class="seccion-formulario__form">
+        <legend>Envianos tus comentarios</legend>
+        <input
+          type="text"
+          placeholder="Escribe tu nombre"
+          name="nombre"
+          title="el nombre solo puede incluir letras y espacios"
+          required
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        />
+        <input
+          type="email"
+          placeholder="Escribe tu email"
+          name="email"
+          title="email invalido"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+          required
+        />
+        <input
+          type="text"
+          placeholder="asunto a tratar"
+          name="asunto"
+          title="debe escribir el asunto a tratar"
+          required
+        />
+        <textarea
+          cols="50"
+          rows="5"
+          name="comentarios"
+          title="el comentario no debe exceder los 100 caracteres"
+          data-pattern="^.{1,100}$"
+          required
+          placeholder="Comentarios..."
+        ></textarea>
+        <input type="submit" value="enviar" />
+        <div class="loader none">
+          <img src="assets/oval.svg" alt="loader" />
+        </div>
+        <div class="mensaje none">
+          <p>Gracias por enviar sus comentarios!</p>
+        </div>
+      </form>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

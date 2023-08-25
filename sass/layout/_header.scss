@@ -1,0 +1,151 @@
+.main-header {
+  background-color: #89119d;
+  border-bottom: 2px solid #ffce00;
+}
+
+#menu {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav-bar {
+  padding: 20px 15px;
+  border-bottom: 2px solid #ffce00;
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.2em;
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: #ffce00;
+    font-size: 20px;
+    position: relative;
+    padding: 0 8px;
+  }
+
+  &__nav-link::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-top: 2px solid #ffce00;
+    border-right: 2px solid #ffce00;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease;
+  }
+  &__nav-link::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-bottom: 2px solid #ffce00;
+    border-left: 2px solid #ffce00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  &__nav-link:hover::after,
+  &__nav-link:hover::before {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.search-bar {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+
+  &__form-search {
+    border: none;
+    outline: none;
+    padding: 0.1rem;
+  }
+
+  &__carrito-container img {
+    width: 30px;
+    background-color: #ffce00;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  &__carrito-container img:hover {
+    transform: scale(1.1);
+  }
+
+  &__carrito-container {
+    position: absolute;
+    top: 3%;
+    right: 1%;
+  }
+
+  &__logo-container {
+    margin-bottom: 10px;
+  }
+
+  &__form-label {
+    display: none;
+  }
+
+  &__form-search {
+    width: 250px;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__form-submit {
+    background-color: #ffce00;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Staatliches", cursive;
+    letter-spacing: 2px;
+    color: #9c27b0;
+    cursor: pointer;
+  }
+
+  &__form-submit:hover {
+    background-color: #c758da;
+    color: #ffce00;
+  }
+}
+
+@media (max-width: 465px) {
+  .nav-bar__nav-link::after,
+  .nav-bar__nav-link::before {
+    height: 0px;
+    width: 0px;
+    border: none;
+  }
+
+  .nav-bar__nav-link:hover::after,
+  .nav-bar__nav-link:hover::before {
+    height: 0;
+    width: 0;
+  }
+
+  .nav-bar__nav-list {
+    width: 100%;
+  }
+}

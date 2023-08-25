@@ -1,0 +1,78 @@
+.seccion-nosotros {
+  width: 75%;
+  margin: 2rem auto;
+
+  &__titulo {
+    color: #ffce00;
+    text-shadow: 3px 3px 2px #89119d;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__parrafo {
+    color: #89119d;
+  }
+}
+
+.slider {
+  border: 2px solid #fff;
+  outline: 2px solid #fff;
+  outline-offset: 0.5rem;
+  height: 500px;
+  position: relative;
+  margin-top: 2rem;
+
+  & img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+  }
+}
+
+.items-container {
+  position: relative;
+  height: 100%;
+
+  &__item {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.9s ease;
+  }
+}
+
+.arrows-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 90px;
+
+  & a {
+    color: #ffce00;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #000;
+      background-color: #ffce00;
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
